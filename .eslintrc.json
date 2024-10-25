@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:tailwindcss/recommended",
+    "plugin:perfectionist/recommended-alphabetical-legacy",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["prefer-arrow-functions"],
+  "rules": {
+    "prefer-arrow-functions/prefer-arrow-functions": [
+      "warn",
+      {
+        "allowNamedFunctions": false,
+        "classPropertiesAllowed": false,
+        "disallowPrototype": false,
+        "returnStyle": "implicit",
+        "singleReturnOnly": false
+      }
+    ],
+    "prettier/prettier": "error",
+    "tailwindcss/no-custom-classname": "off"
+  }
+}

@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+LAST_COMMIT_MSG=$(git log -1 --pretty=%B)
+
+if ! echo "$LAST_COMMIT_MSG" | grep -q "(release)"; then
+  npm run release
+fi
